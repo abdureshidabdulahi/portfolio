@@ -124,6 +124,14 @@ img{
     overflow: hidden;
 }
 
+.blob-animate{
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(180deg,
+    var(--first-color-alt) 20%,
+    var(--first-color-light) 100%);
+}
+
 /* ================ header and nav ============= */
 
  .header{
@@ -165,4 +173,7 @@ img{
     font: var(--font-semi-bold) var(--small-font-size) var(--second-font);
     transition:  color .4s, text-shadow .4s; 
  }
- .nav__link
+ .nav__link:hover{
+    color: var(--first-color);
+    text-shadow: 0 8px 16px var(--first-color);
+ }
