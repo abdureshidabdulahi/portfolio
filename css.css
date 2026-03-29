@@ -5,18 +5,19 @@
 
 
  :root {
+    --header-height:3.5rem;
   --hue: 255;
 
   --first-color: hsl(var(--hue), 60%, 64%);
-  --first-color-alt: hsl(var(--hue), 80%, 56%);
-  --first-color-alt-2: hsl(var(--hue), 60%, 56%);
-  --first-color-light: hsl(var(--hue), 60%, 74%);
+ --first-color-alt: hsl(255, 80%, 56%);
+  --first-color-alt-2: hsl(212, 76%, 90%);
+--first-color-light: hsl(212, 76%, 90%);
 
   --title-color: hsl(240, 8%, 95%);
   --text-color: hsl(240, 8%, 70%);
   --text-color-light: hsl(240, 8%, 50%);
 
-  --body-color: hsl(240, 100%, 2%);
+ --body-color: hsl(230, 12%, 13%);
   --container-color: hsl(240, 8%, 6%);
 
   /*========== Font and typography ==========*/
@@ -120,6 +121,9 @@ img{
     margin-bottom: 3rem;
 
 }
+.section__title span{
+    color: var(--first-color);
+}
 .main{
     overflow: hidden;
 }
@@ -136,7 +140,7 @@ img{
     z-index: -1;
     animation: animateBlob 5s linear infinite;
 }
-@keyframes animatedBlob {
+@keyframes animateBlob {
     0%{
         transform: rotate(0);
     }
@@ -161,6 +165,7 @@ img{
     display: flex;
     justify-content: space-between;
     padding-block: 1rem;
+    /* border: 2px solid tomato; */
  }
  .nav__logo{
     font-family: var(--second-font);
