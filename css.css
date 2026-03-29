@@ -129,7 +129,20 @@ img{
     height: 100px;
     background: linear-gradient(180deg,
     var(--first-color-alt) 20%,
-    var(--first-color-light) 100%);
+    var(--first-color-light) 100%); 
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(35px);
+    z-index: -1;
+    animation: animateBlob 5s linear infinite;
+}
+@keyframes animatedBlob {
+    0%{
+        transform: rotate(0);
+    }
+     100%{
+        transform: rotate(360deg);
+    }
 }
 
 /* ================ header and nav ============= */
@@ -149,14 +162,14 @@ img{
     justify-content: space-between;
     padding-block: 1rem;
  }
- .nav__logog{
+ .nav__logo{
     font-family: var(--second-font);
     font-weight: var(--font-semi-bold);
     color: var(--title-color);
     align-self: flex-start;
     transition: color  .4s;
  } 
- .nav__logog:hover{
+ .nav__logo:hover{
     color: var(--first-color);
 
  }
