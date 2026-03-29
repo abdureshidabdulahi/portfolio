@@ -9,16 +9,16 @@
   --hue: 255;
 
   --first-color: hsl(var(--hue), 60%, 64%);
- --first-color-alt: hsl(255, 80%, 56%);
+--first-color-alt: hsl(216, 30%, 43%);
   --first-color-alt-2: hsl(212, 76%, 90%);
 --first-color-light: hsl(212, 76%, 90%);
 
-  --title-color: hsl(240, 8%, 95%);
+--title-color: hsl(212, 76%, 90%);
   --text-color: hsl(240, 8%, 70%);
   --text-color-light: hsl(240, 8%, 50%);
 
  --body-color: hsl(230, 12%, 13%);
-  --container-color: hsl(240, 8%, 6%);
+  --container-color: hsl(230, 12%, 13%);
 
   /*========== Font and typography ==========*/
   /* .5rem = 8px | 1rem = 16px */
@@ -161,6 +161,10 @@ img{
     hsla(240,100%,2%,0) 100%) ;
     z-index: var(--z-fixed);
  }
+ .header .blob-animate{
+    top: -3rem;
+    left: -3rem;
+ }
  .nav{
     display: flex;
     justify-content: space-between;
@@ -180,9 +184,10 @@ img{
  }
  .nav__list{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: flex-end;
-    row-gap: .5rem;
+    /* row-gap: .5rem; */
+    gap: 5rem;
     
 
  }
@@ -194,4 +199,70 @@ img{
  .nav__link:hover{
     color: var(--first-color);
     text-shadow: 0 8px 16px var(--first-color);
+ }
+
+ .ri-menu-line{
+    display: none;
+ }
+
+
+ /* =========== for small devices = ================= */
+ @media(max-width:480px) {
+    .container{
+        margin-inline: 1rem;
+        position: relative;
+        align-items: center;
+    } 
+    .nav__menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        /* border: 2px solid tomato;  */
+        padding: 10px;
+    }
+    .nav__logo{
+        align-self: initial;
+
+    }
+    .nav__list{
+        display: flex;
+        flex-direction: column; 
+        gap: 5px;
+        align-items: center;
+        display: none;
+    }
+    .nav__link:hover{
+    color: var(--first-color);
+    text-shadow: 0 8px 16px var(--first-color);
+ }
+ .ri-menu-line{
+    display: block;
+    font-size: 30px;
+ }
+ .ri-menu-line:hover{
+    color: var(--first-color);
+    text-shadow: 0 8px 16px var(--first-color);
+ }
+    
+ }
+
+ /*  for large devices  */
+ @media screen and (min-width:1150px) {
+    .container{
+        margin-inline: auto;
+        
+    }
+    .nav{
+        height:calc(var(--header-height) + 2rem);
+         align-items: center;
+    }
+    .nav__logo{
+        align-self: initial;
+
+    }
+    .nav__lists{
+        flex-direction: row;
+        column-gap: 5.5rem;
+    }
+    
  }
