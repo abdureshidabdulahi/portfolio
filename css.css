@@ -160,3 +160,9 @@ img{
     
 
  }
+ .nav__link{
+    color: var(--title-color);
+    font: var(--font-semi-bold) var(--small-font-size) var(--second-font);
+    transition:  color .4s, text-shadow .4s; 
+ }
+ .nav__link
