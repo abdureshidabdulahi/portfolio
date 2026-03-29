@@ -1,0 +1,162 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap');
+ 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&family=Unbounded:wght@200..900&display=swap');
+
+
+ :root {
+  --hue: 255;
+
+  --first-color: hsl(var(--hue), 60%, 64%);
+  --first-color-alt: hsl(var(--hue), 80%, 56%);
+  --first-color-alt-2: hsl(var(--hue), 60%, 56%);
+  --first-color-light: hsl(var(--hue), 60%, 74%);
+
+  --title-color: hsl(240, 8%, 95%);
+  --text-color: hsl(240, 8%, 70%);
+  --text-color-light: hsl(240, 8%, 50%);
+
+  --body-color: hsl(240, 100%, 2%);
+  --container-color: hsl(240, 8%, 6%);
+
+  /*========== Font and typography ==========*/
+  /* .5rem = 8px | 1rem = 16px */
+
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Unbounded", sans-serif;
+
+  --biggest-font-size: 2rem;
+  --bigger-font-size: 1.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+     /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+
+
+/* ===============Responseive typography ============ */
+@media screen and (min-width:1150px){
+    :root{
+        --biggest-font-size:3rem;
+        --blogger-font-size:2rem;
+        --h1-font-size:2.25rem;
+        --h2-font-size:1.5rem;
+        --h3-font-size:1.25rem;
+        --normal-font-size:1rem;
+        --small-font-size:.875rem;
+        --smaller-font-size:.813rem
+    }
+}
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  
+}
+button{
+    outline: none;
+    border: none;
+}
+h1, h2, h3, h4 {
+    color: var(--title-color);
+    font-family: var(--second-font);
+    font-weight: var(--font-semi-bold);
+    line-height: 1.2;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* =============== resusable css classes  ==============*/
+.container{
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+.section{
+    padding-block: 5rem 1rem;
+}
+.section__title{
+    text-align: center;
+    font-size: var(--h1-font-size);
+    margin-bottom: 3rem;
+
+}
+.main{
+    overflow: hidden;
+}
+
+/* ================ header and nav ============= */
+
+ .header{
+    position: fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    background:linear-gradient(180deg,
+    var(--body-color),60%,
+    hsla(240,100%,2%,0) 100%) ;
+    z-index: var(--z-fixed);
+ }
+ .nav{
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1rem;
+ }
+ .nav__logog{
+    font-family: var(--second-font);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+    align-self: flex-start;
+    transition: color  .4s;
+ } 
+ .nav__logog:hover{
+    color: var(--first-color);
+
+ }
+ .nav__list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: .5rem;
+    
+
+ }
