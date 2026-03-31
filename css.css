@@ -80,6 +80,7 @@ button {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  overflow-x:hidden ;
   
 }
 button{
@@ -333,13 +334,14 @@ img{
     .home__social{
         bottom: 3rem;
         row-gap: 1.5rem;
+        left: 1rem;
     }
     .home__social-link{
         font-size: 1.5rem;
     }
     .home__cv{
         font-size: var(--normal-font-size);
-        rotate: 0deg;
+        /* rotate: -90deg; */
         right: 0;
     }
     
@@ -437,6 +439,7 @@ img{
     display: flex;
     flex-direction: column;
     row-gap: 0.75rem;
+    left: 1rem;
 }
 .home__social-link{
     color: var(--title-color);
@@ -450,19 +453,19 @@ img{
 }
 .home__cv{
     z-index: 2;
-    right: -2.5rem;
-    bottom: 2.5rem;
-    rotate: -90deg;
+    right: 2.5rem;
+    bottom: 2.5rem; 
     color: var(--text-color-light);
     font: var(--font-medium) var(--small-font-size) var(--second-font);
     display: flex;
     align-items: center;
     column-gap: .5rem;
-    transition: color .4s;
+    transition: color .4s; 
 
 }
 .home__cv i{
     font-size: 1rem;
+    right: 1rem;
 }
 .home__cv:hover{
     color: var(--first-color);
