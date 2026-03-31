@@ -243,6 +243,16 @@ img{
     color: var(--first-color);
     text-shadow: 0 8px 16px var(--first-color);
  }
+ .blob,
+ .home__image .blob-animate{
+    width: 220px;
+    height: 220px;
+ }
+    
+ }
+ /* =====for medium devidces ===============*/
+ @media (min-width:540px) {
+    
     
  }
 
